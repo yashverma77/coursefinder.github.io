@@ -1,62 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Course and College Finder</title>
+  
+  <title>Course Finder</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.search-section {
+  padding: 20px;
+}
+
+.search-section h2 {
+  margin-bottom: 10px;
+}
+
+.search-section form input[type="text"] {
+  width: 300px;
+  padding: 5px;
+}
+
+.search-section form button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.results-section {
+  padding: 20px;
+}
+
+  </style>
 </head>
-<body class="bg-gray-100">
-  <header class="bg-blue-500 py-4">
-    <div class="container mx-auto flex items-center justify-between px-4">
-      <h1 class="text-white text-2xl font-semibold">Course and College Finder</h1>
-      <nav>
-        <ul class="flex space-x-4 text-white">
-          <li><a href="#" class="hover:text-gray-200">Home</a></li>
-          <li><a href="#" class="hover:text-gray-200">Courses</a></li>
-          <li><a href="#" class="hover:text-gray-200">Colleges</a></li>
-          <li><a href="#" class="hover:text-gray-200">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+<body>
+  <header>
+    <h1>Course Finder</h1>
   </header>
 
-  <main class="container mx-auto py-8">
-    <h2 class="text-3xl font-semibold mb-4">Find Your Perfect Course</h2>
-    <form class="flex space-x-4">
-      <input type="text" placeholder="Enter a course name" class="w-1/2 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Search</button>
+  <section class="search-section">
+    <h2>Search for a Course</h2>
+    <form>
+      <input type="text" placeholder="Enter a course name">
+      <button type="submit">Search</button>
     </form>
+  </section>
 
-    <h2 class="text-3xl font-semibold mt-8 mb-4">Featured Colleges</h2>
-    <div class="grid grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg p-4 shadow">
-        <h3 class="text-xl font-semibold">private college</h3>
-        <p class="text-gray-500">punjab</p>
-        <p class="mt-4">Description</p>
-        <a href="https://www.srmuniversity.ac.in/" class="block text-blue-500 mt-4 hover:underline">Learn More</a>
-      </div>
-      <div class="bg-white rounded-lg p-4 shadow">
-        <h3 class="text-xl font-semibold">insitute of technology</h3>
-        <p class="text-gray-500">delhi</p>
-        <p class="mt-4">Description </p>
-        <a href="https://www.kccitm.edu.in/" class="block text-blue-500 mt-4 hover:underline">Learn More</a>
-      </div>
-      <div class="bg-white rounded-lg p-4 shadow">
-        <h3 class="text-xl font-semibold">arts and commerce college</h3>
-        <p class="text-gray-500">delhi</p>
-        <p class="mt-4">Description </p>
-        <a href="https://colart.delhi.gov.in/" class="block text-blue-500 mt-4 hover:underline">Learn More</a>
-      </div>
+  <section class="results-section">
+    <h2>Search Results</h2>
+    <div class="course">
+      <h3>B-TECH</h3>
+      <p>College: MIET</p>
+      <p>Location: MEERUT, UTTAR PRADESH</p>
+      <p>Website: <a href="https://www.miet.ac.in/">MIET COLLEGE</a></p>
     </div>
-  </main>
+    <!-- Repeat the course div for each search result -->
+  </section>
 
-  <footer class="bg-gray-200 py-4">
-    <div
-    class="container mx-auto text-center">
-<p class="text-gray-600">Course and College Finder © 2023. All rights reserved.</p>
-</div>
-
+  <footer>
+    <p>&copy; 2023 Course Finder. All rights reserved.</p>
   </footer>
 </body>
 </html>
+ 
