@@ -1,80 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
   <title>Course Finder</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-.search-section {
-  padding: 20px;
-}
-
-.search-section h2 {
-  margin-bottom: 10px;
-}
-
-.search-section form input[type="text"] {
-  width: 300px;
-  padding: 5px;
-}
-
-.search-section form button {
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.results-section {
-  padding: 20px;
-}
-
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Course Finder</h1>
+  <header class="bg-gray-800 text-white py-4 px-6">
+    <h1 class="text-3xl font-bold">Course Finder</h1>
   </header>
 
-  <section class="search-section">
-    <h2>Search for a Course</h2>
-    <form>
-      <input type="text" placeholder="Enter a course name">
-      <button type="submit">Search</button>
+  <section class="py-10 px-6">
+    <h2 class="text-2xl font-bold mb-4">Search for a Course</h2>
+    <form class="flex items-center">
+      <input type="text" placeholder="Enter a course name" class="py-2 px-4 rounded-l-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
+      <button type="submit" class="py-2 px-6 bg-blue-500 text-white rounded-r-md">Search</button>
     </form>
   </section>
 
-  <section class="results-section">
-    <h2>Search Results</h2>
-    <div class="course">
-      <h3>B-TECH</h3>
-      <p>College: MIET</p>
-      <p>Location: MEERUT, UTTAR PRADESH</p>
-      <p>Website: <a href="https://www.miet.ac.in/">MIET COLLEGE</a></p>
+  <section class="py-10 px-6">
+    <h2 class="text-2xl font-bold mb-4">Search Results</h2>
+    <div class="bg-white rounded-md shadow-md p-4 mb-4">
+      <h3 class="text-xl font-bold mb-2">Course Name</h3>
+      <p class="mb-2">Provider: SRCC</p>
+      <p class="mb-2">Duration: 3 YEARS</p>
+      <p class="mb-2">Website: <a href="https://www.srcc.edu/" class="text-blue-500">SRCC WEBSITE</a></p>
     </div>
-    <!-- Repeat the course div for each search result -->
+    <!-- Repeat the result div for each search result -->
   </section>
 
-  <footer>
+  <footer class="bg-gray-800 text-white py-4 px-6 text-center text-sm">
     <p>&copy; 2023 Course Finder. All rights reserved.</p>
   </footer>
 </body>
 </html>
- 
