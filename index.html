@@ -3,21 +3,44 @@
 <head>
   <title>Course Finder</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Hover effect on search button */
+    .search-button:hover {
+      background-color: #1E40AF;
+    }
+
+    /* Responsive layout using media queries */
+    @media (min-width: 768px) {
+      .header-text {
+        color: white;
+      }
+    }
+
+    /* Custom CSS animation */
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .search-results {
+      animation: fade-in 1s;
+    }
+  </style>
 </head>
 <body>
   <header class="bg-gray-800 text-white py-4 px-6">
-    <h1 class="text-3xl font-bold">Course Finder</h1>
+    <h1 class="text-3xl font-bold header-text">Course Finder</h1>
   </header>
 
   <section class="py-10 px-6">
     <h2 class="text-2xl font-bold mb-4">Search for a Course</h2>
     <form class="flex items-center">
       <input type="text" placeholder="Enter a course name" class="py-2 px-4 rounded-l-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
-      <button type="submit" class="py-2 px-6 bg-blue-500 text-white rounded-r-md">Search</button>
+      <button type="submit" class="py-2 px-6 bg-blue-500 text-white rounded-r-md transition-colors search-button">Search</button>
     </form>
   </section>
 
-  <section class="py-10 px-6">
+  <section class="py-10 px-6 search-results">
     <h2 class="text-2xl font-bold mb-4">Search Results</h2>
     <div class="bg-white rounded-md shadow-md p-4 mb-4">
       <h3 class="text-xl font-bold mb-2">B-COM</h3>
